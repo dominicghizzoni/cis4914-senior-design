@@ -1,0 +1,211 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: var(--color-surface);
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    border-radius: 20px 20px 0 0;
+    padding: 10px 20px 30px;
+    animation: slideUp 0.2s ease;
+    transition: transform 0.2s ease;
+    overflow-y: auto;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.modal-handle {
+    width: 50px;
+    height: 5px;
+    background: var(--color-border);
+    border-radius: 50px;
+    margin: 5px auto 20px;
+}
+
+.modal-title {
+    font-size: 22px;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.modal-body {
+    color: var(--color-text);
+}
+
+.modal-label {
+    display: block;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-surface-3);
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text);
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.modal-input:focus {
+    border-color: var(--color-accent-strong);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input[type="date"]::-moz-focus-inner {
+    filter: invert(1);
+}
+
+.modal-select {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-surface-2);
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text);
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.modal-btn:active {
+    transform: scale(0.98);
+}
+
+.modal-btn-primary {
+    background: var(--color-accent);
+    color: var(--color-text);
+}
+
+.modal-btn-primary:hover {
+    background: var(--color-accent-hover);
+}
+
+.modal-btn-secondary {
+    background: var(--color-accent-secondary);
+    color: var(--color-text);
+}
+
+.modal-btn-secondary:hover {
+    background: var(--color-accent-secondary-hover);
+}
+
+.invite-code-box {
+    background: var(--color-surface-3);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.invite-code {
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: var(--color-accent-strong);
+    font-weight: bold;
+}
+
+.qr-placeholder {
+    width: 150px;
+    height: 150px;
+    background: var(--color-text);
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-surface-3);
+    font-size: 12px;
+}
+
+.upload-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: var(--color-surface-2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.upload-option:hover {
+    background: var(--color-surface-3);
+}
+
+.upload-option i {
+    color: var(--color-accent-strong);
+    width: 30px;
+    text-align: center;
+}
+
+.upload-option span {
+    color: var(--color-text);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-actions .pill-btn {
+    flex: 1;
+}
+
+@media (min-width: 500px) {
+    .modal-content {
+        margin-bottom: 20px;
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+}

@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     padding: 10px;
     width: 100%;
@@ -17,39 +16,39 @@
 }
 
 .welcome-text {
-    font-size: clamp(24px, 8vw, 40px);
-    color: #ffffff;
-    margin: 0 0 20px 0;
+    font-size: clamp(30px, 8vw, 40px);
+    color: var(--color-text);
+    margin: 10px 0 20px 0;
     letter-spacing: 5px;
-    background-color: #1f1f1f;
-    padding: 0px 40px;
+    background-color: var(--color-surface);
+    padding: 0 15px 0 20px;
     border-radius: 20px;
-    filter: drop-shadow(0 0 10px #000000);
+    filter: drop-shadow(0px 0px 10px var(--color-shadow-white));
 }
 
 .login-logo {
-    width: 100px;
-    height: 100px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    width: 125px;
+    height: 125px;
+    filter: drop-shadow(0px 0px 10px var(--color-shadow-white));
 }
 
 .login-title {
     font-family: 'Jersey 10', sans-serif;
     font-size: 36px;
     font-weight: 400;
-    color: #ffffff;
+    color: var(--color-text);
     margin: 0;
     letter-spacing: 2px;
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(0 0 5px var(--color-shadow-strong));
 }
 
 .login-card {
     width: 90%;
     max-width: 400px;
-    background: #2a2a2a;
+    background: var(--color-surface-2);
     border-radius: 25px;
     padding: 20px;
-    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(5px 5px 10px var(--color-shadow-white));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,12 +67,12 @@
     font-family: 'Jersey 10', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #ffffff;
+    color: var(--color-text);
     display: block;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: 5px;
     letter-spacing: 1px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(0 0 10px var(--color-shadow-strong));
 }
 
 .form-input {
@@ -81,21 +80,21 @@
     padding: 5px 10px;
     font-family: 'Jersey 10', sans-serif;
     font-size: 14px;
-    background: #404040;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: var(--color-surface-3);
+    border: 2px solid var(--color-border);
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--color-text);
     outline: none;
-    transition: border-color 0.2s ease;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
+    transition: border-color 0.2s;
+    filter: drop-shadow(5px 5px 10px var(--color-shadow-strong));
 }
 
 .form-input:focus {
-    border-color: #40e040;
+    border-color: var(--color-accent-strong);
 }
 
 .form-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--color-text-muted);
 }
 
 .password-input-container {
@@ -114,43 +113,43 @@
     right: 5px;
     background: none;
     border: none;
-    color: #aaaaaa;
+    color: var(--color-text-muted);
     cursor: pointer;
     font-size: 14px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
 }
 
 .password-toggle:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-accent-secondary);
 }
 
 .login-button {
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px;
     font-family: 'Jersey 10', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    color: #ffffff;
-    background: #20b020;
+    color: var(--color-text);
+    background: var(--color-accent);
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s, transform 0.2s;
     margin-top: 10px;
     letter-spacing: 1px;
-    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5));
+    filter: drop-shadow(5px 5px 5px var(--color-shadow));
 }
 
 .login-button:hover {
-    background: #40e040;
+    background: var(--color-accent-strong);
 }
 
 .login-button:active {
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
 .create-account-button {
@@ -158,36 +157,27 @@
     padding: 5px 10px;
     font-size: 12px;
     font-weight: 400;
-    color: #ffffff;
-    background: #353535;
+    color: var(--color-text);
+    background: var(--color-accent-secondary);
     border-radius: 30px;
+    border: 0;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s, transform 0.2s;
     letter-spacing: 1px;
-    border: 0px;
-    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 3px var(--color-shadow-white));
 }
 
 .create-account-button:hover {
-    background: #505050;
-    }
+    background: var(--color-accent-secondary-hover);
+}
 
 .create-account-button:active {
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
 @media (min-width: 500px) {
     .login-card {
         padding: 25px 20px;
-    }
-    
-    .login-logo {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .login-title {
-        font-size: 40px;
     }
     
     .welcome-text {

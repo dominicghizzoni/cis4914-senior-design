@@ -17,9 +17,6 @@ const Login = () => {
     e.preventDefault();
     try {
       if (isRegistering) {
-        // TODO: implement registration API call
-        console.log('Registering with:', { username, email, password });
-        // for now, just switch to login mode after "successful" registration
         setIsRegistering(false);
         setEmail('');
         setPassword('');
@@ -28,7 +25,6 @@ const Login = () => {
         navigate('/');
       }
     } catch (error) {
-      // TODO: add proper error handling and user feedback
       console.error('Authentication failed:', error);
     }
   };

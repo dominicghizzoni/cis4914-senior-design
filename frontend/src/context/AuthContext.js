@@ -9,15 +9,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      // TODO: validate token with backend
       setUser({ token });
     }
     setLoading(false);
   }, []);
 
-  // TODO: replace with real API call
   const login = async (credentials) => {
-    // mock successful login
     const mockToken = 'mock-jwt-token';
     localStorage.setItem('token', mockToken);
     setUser({ username: credentials.username, token: mockToken });

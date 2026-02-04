@@ -1,0 +1,183 @@
+.team-page {
+    padding: 15px;
+    min-height: 100vh;
+}
+
+.team-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.team-name {
+    flex: 1;
+    font-size: clamp(24px, 6vw, 32px);
+    margin: 0;
+    filter: drop-shadow(0px 0px 5px var(--color-shadow-strong));
+}
+
+.invite-btn {
+    background: var(--color-accent-secondary);
+    border: none;
+    color: var(--color-text);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+    filter: drop-shadow(0px 0px 3px var(--color-shadow-white));
+}
+
+.invite-btn:hover {
+    background: var(--color-accent-secondary-hover);
+}
+
+.invite-btn:active {
+    transform: scale(0.95);
+}
+
+.games-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    background: var(--color-divider);
+    border: 2px dashed var(--color-border);
+    border-radius: 12px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    filter: drop-shadow(0 0 5px var(--color-shadow));
+}
+
+.add-game-card:hover {
+    border-color: var(--color-accent-strong);
+    color: var(--color-accent-strong);
+}
+
+.add-game-card i {
+    font-size: 20px;
+}
+
+.add-game-card span {
+    font-size: 12px;
+}
+
+.month-group {
+    margin-top: 10px;
+}
+
+.month-header {
+    font-size: 24px;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    filter: drop-shadow(0 0 5px var(--color-shadow-strong));
+}
+
+.game-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: var(--color-surface-2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: background-color 0.2s;
+    filter: drop-shadow(5px 5px 5px var(--color-shadow-white));
+}
+
+.game-card:hover {
+    background: var(--color-surface-3);
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.game-opponent {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.game-date {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.game-card i {
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.invite-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.invite-tab {
+    flex: 1;
+    padding: 5px;
+    background: var(--color-surface-3);
+    border: none;
+    border-radius: 10px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.invite-tab.active {
+    background: var(--color-accent-secondary);
+    color: var(--color-text);
+}
+
+.invite-search,
+.invite-code-section {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    .team-page {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .invite-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .game-card {
+        padding: 20px;
+    }
+
+    .game-opponent {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 800px) {
+  .team-page {
+    max-width: 700px;
+  }
+}

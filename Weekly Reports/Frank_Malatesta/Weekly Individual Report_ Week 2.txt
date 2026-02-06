@@ -1,0 +1,17 @@
+﻿Week 2
+Name: Frank Malatesta | Group: Trainers
+Time Dedicated to the Project
+The following is an estimate of the amount of time I spent on each task this week:
+* Weekly group meeting: ~30 minutes
+* Brainstorming wireframe for app: ~30 minutes
+* Research and work towards Project Proposal: ~2 hours
+Staying consistent with our weekly group meetings will keep our team committed and focused towards completing our project.
+Contribution to the Project Development Process
+I created a possible wireframe for our app. Our group will reconvene and we will each share the wireframe we made to each other. This will get us on the same page for how our app will be designed and let us collaborate and build off of each other’s ideas.
+I created the basic outline for the Project Proposal and began to work on it, researching the past literature in topics relevant to our app. The Project Proposal will be the primary priority of our group going into next week as we hope to have it finished by Wednesday.
+We began to assign ourselves tasks on Jira to stay organized and give us direction. I will be assisting Blake with the development of the backend of our app after our project gains approval.
+Demonstration of Applied Knowledge
+We took a preemptive measure of creating our own wireframes to ensure that we would all be on the same page as a group. The concern was that if we did not do planning for the project in the early stages, the ideas of the project in our head would diverge and we would eventually be working against each other.
+I identified the important aspects of our project and what makes it technically unique, being the compilation of videos synced by audio, and used that to guide the research that I did in the literature review for the Project Proposal.
+Reflection and Lessons Learned
+I think we’ve done a good job to stay consistent and focused on our project so far. This is due in part to the planning we’ve done to set ourselves up for success. I think if we continue to motivate each other and plan clearly and early, we will steer away from many potential issues we would otherwise face.

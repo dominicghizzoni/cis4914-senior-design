@@ -1,0 +1,17 @@
+﻿Week 3
+Name: Frank Malatesta | Group: Trainers
+Time Dedicated to the Project
+The following is an estimate of the amount of time I spent on each task this week:
+* Weekly group meeting: ~30 minutes
+* Finalize wireframe V1: ~1.5 hours
+* Research and work towards Project Proposal: ~2 hours
+Staying consistent with our weekly group meetings will keep our team committed and focused towards completing our project.
+Contribution to the Project Development Process
+I, with the help of Jett, worked on the first version of a wireframe for our app. This serves to get us on the same page for how our app will be designed so we can have a basic outline from where to start working.
+I continued to work on the Project Proposal, researching the past literature in topics relevant to our app. The Project Proposal was the primary priority of our group this week. I contributed to the literature survey and looked over what other group members included to know what gaps still needed to be filled.
+I will be assisting Blake with the development of the backend of our app after our project gains approval.
+Demonstration of Applied Knowledge
+We took a preemptive measure of creating our own wireframes to ensure that we would all be on the same page as a group. The concern was that if we did not do planning for the project in the early stages, the ideas of the project in our head would diverge and we would eventually be working against each other.
+I identified the important aspects of our project and what makes it technically unique, being the compilation of videos synced by audio, and used that to guide the research that I did in the literature review for the Project Proposal.
+Reflection and Lessons Learned
+I think we’ve done well to stay consistent and focused on our project so far. This is due in part to the planning we’ve done to set ourselves up for success. As we continue to get more work from other classes as the semester intensifies, we will have to remain dedicated to the project to not let our effort slip. I think if we continue to motivate each other and plan clearly and early, we will steer away from many potential issues we would otherwise face.

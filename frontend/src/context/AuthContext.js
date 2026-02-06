@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
+import api from '../utils/api';
 
 export const AuthContext = createContext();
 
@@ -8,16 +9,47 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    if (token) {
-      setUser({ token });
+    if(!token) {
+      setLoading(false);
+      return;
     }
-    setLoading(false);
+
+    const fetchUser = async () => {
+      try {
+        const res = await api.get('/users/me');
+        setUser(res.data);
+      } catch (err) {
+        console.error('Error validating token:', err);
+        localStorage.removeItem('token');
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+
+
   }, []);
 
-  const login = async (credentials) => {
-    const mockToken = 'mock-jwt-token';
-    localStorage.setItem('token', mockToken);
-    setUser({ username: credentials.username, token: mockToken });
+  const login = async ({ username, password }) => {
+    try {
+      const res = await api.post('/auth/login', {
+        username,
+        password
+      });
+
+      const { token, user } = res.data;
+
+      localStorage.setItem('token', token);
+      setUser(user);
+
+      return { success: true };
+    } catch (err) {
+      console.error('Login failed:', err);
+      const message = err.response?.data?.message || 'Login failed. Please try again.';
+      return { success: false, message };
+    }
   };
 
   const logout = () => {
@@ -30,6 +62,7 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     loading,
+    isAuthenticated: !!user,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

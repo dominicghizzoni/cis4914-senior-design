@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import VideoUploader from '../components/VideoUploader';
 
 const Home = () => {
   const teams = [
@@ -59,6 +60,7 @@ const Home = () => {
             </div>
           </div>
         ))}
+        <VideoUploader />
       </div>
     </div>
   );

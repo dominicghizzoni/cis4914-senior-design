@@ -1,8 +1,10 @@
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+
+const videoRoutes = require("./routes/videos");
 
 const app = express();
 
@@ -17,10 +19,12 @@ app.get('/', (req, res) => {
     res.json({message: 'API is running'});
 });
 
+app.use('/videos', videoRoutes);
+
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
